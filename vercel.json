@@ -17,14 +17,7 @@
       "dest": "/index.html"
     }
   ],
-  "env": [
-    "SUPABASE_URL",
-    "SUPABASE_KEY",
-    "SUPABASE_SERVICE_KEY",
-    "JWT_SECRET",
-    "ADMIN_TOKEN",
-    "ESPN_BASE_URL"
-  ],
+
   "regions": ["sfo1"],
   "headers": [
     {
