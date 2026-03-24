@@ -1,0 +1,24 @@
+{
+  "name": "coverquest",
+  "version": "0.1.0",
+  "description": "32-player NFL pick'em game with weekly spreads and scoring",
+  "main": "api/index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "start": "node server.js",
+    "db:setup": "psql -f db/schema.sql"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
+    "node-fetch": "^2.6.11",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}

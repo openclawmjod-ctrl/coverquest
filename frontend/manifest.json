@@ -1,0 +1,34 @@
+{
+  "name": "CoverQuest",
+  "short_name": "CoverQuest",
+  "description": "32-player NFL pick'em game with weekly spreads and scoring",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1F2937",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%231F2937' width='192' height='192'/><text x='96' y='110' font-size='80' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>🏈</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%231F2937' width='192' height='192'/><text x='96' y='110' font-size='80' font-weight='bold' fill='white' text-anchor='middle' font-family='Arial'>🏈</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%23f3f4f6' width='540' height='720'/><text x='270' y='360' font-size='48' fill='%231F2937' text-anchor='middle'>CoverQuest</text></svg>",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["sports", "entertainment"],
+  "screenshots": []
+}

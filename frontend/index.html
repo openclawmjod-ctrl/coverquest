@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1F2937">
+  <meta name="description" content="32-player NFL pick'em game with weekly spreads and scoring">
+  <title>CoverQuest - NFL Pick'em</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='75' font-size='80' text-anchor='middle'>🏈</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%231F2937' width='180' height='180'/><text x='90' y='130' font-size='120' text-anchor='middle'>🏈</text></svg>">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Auth Screen -->
+    <div id="screen-auth" class="screen active">
+      <div class="auth-container">
+        <div style="text-align: center; margin-bottom: 30px;">
+          <div style="font-size: 60px; margin-bottom: 12px;">🏈</div>
+          <h1 style="color: var(--primary); margin-bottom: 8px;">CoverQuest</h1>
+          <p style="color: var(--text-light);">32-player NFL pick'em game</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Login</button>
+          <button class="auth-tab" data-tab="signup">Sign Up</button>
+        </div>
+
+        <form id="login-form" class="auth-form active">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required placeholder="••••••••">
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">Sign In</button>
+        </form>
+
+        <form id="signup-form" class="auth-form">
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="signup-username">Username</label>
+            <input type="text" id="signup-username" required placeholder="pickmaster">
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required placeholder="••••••••">
+          </div>
+          <div class="form-group">
+            <label for="signup-confirm">Confirm Password</label>
+            <input type="password" id="signup-confirm" required placeholder="••••••••">
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%;">Create Account</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Picks Screen -->
+    <div id="screen-picks" class="screen">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading games...</p>
+      </div>
+    </div>
+
+    <!-- Standings Screen -->
+    <div id="screen-standings" class="screen">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading standings...</p>
+      </div>
+    </div>
+
+    <!-- Season Screen -->
+    <div id="screen-season" class="screen">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading season stats...</p>
+      </div>
+    </div>
+
+    <!-- Profile Screen -->
+    <div id="screen-profile" class="screen">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading profile...</p>
+      </div>
+    </div>
+
+    <!-- Content area -->
+    <div id="content"></div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <a href="#" class="nav-item" data-screen="picks">
+        <div class="nav-icon">🏈</div>
+        <div>Picks</div>
+      </a>
+      <a href="#" class="nav-item" data-screen="standings">
+        <div class="nav-icon">📊</div>
+        <div>Standings</div>
+      </a>
+      <a href="#" class="nav-item" data-screen="season">
+        <div class="nav-icon">📈</div>
+        <div>Season</div>
+      </a>
+      <a href="#" class="nav-item" data-screen="profile">
+        <div class="nav-icon">👤</div>
+        <div>Profile</div>
+      </a>
+    </nav>
+  </div>
+
+  <script src="/api.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

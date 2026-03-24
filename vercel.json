@@ -1,0 +1,48 @@
+{
+  "buildCommand": "npm install",
+  "outputDirectory": "frontend",
+  "framework": "vanilla",
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": [
+    "SUPABASE_URL",
+    "SUPABASE_KEY",
+    "SUPABASE_SERVICE_KEY",
+    "JWT_SECRET",
+    "ADMIN_TOKEN",
+    "ESPN_BASE_URL"
+  ],
+  "regions": ["sfo1"],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    }
+  ]
+}
