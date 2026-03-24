@@ -1,7 +1,6 @@
 {
   "buildCommand": "npm install",
   "outputDirectory": "frontend",
-  "framework": "vanilla",
   "functions": {
     "api/**/*.js": {
       "runtime": "nodejs18.x"
